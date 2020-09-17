@@ -50,16 +50,21 @@ public class StringCompareTest {
     public void secondCharOfLeftLessThanRightShouldBeNegative(){
         StringCompare compare = new StringCompare();
         int rst = compare.compare(
-                "Patrova",
+                "Petrova",
                 "Petrov"
         );
-        assertTrue(rst < 0);
+        assertTrue(rst > 0);
     }
 
     @Test
-    public void leftGreaterRightResultPositive() {
+    public void firstCharDifferentCase() {
         StringCompare cmp = new StringCompare();
         assertTrue(cmp.compare("ivanov", "Ivanov") > 0);
-        assertTrue(cmp.compare("1a", "2a") < 0);
+    }
+
+    @Test
+    public void numbersInSequence() {
+        StringCompare cmp = new StringCompare();
+        assertTrue(cmp.compare("1abc", "2abc") < 0);
     }
 }
