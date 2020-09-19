@@ -13,6 +13,6 @@ public class StringCompare implements Comparator<String> {
                 return cmp;
             }
         }
-        return cmp == 0 && s0.length() != s1.length() ? Integer.compare(s0.length(), s1.length()) : cmp;
+        return Integer.compare(s0.length(), s1.length());
     }
 }
