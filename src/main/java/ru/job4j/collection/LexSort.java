@@ -5,7 +5,7 @@ import java.util.Comparator;
 public class LexSort implements Comparator<String> {
 
     private int getNumbersPart(String s) {
-        String test = s.split("\\b\\p{P}")[0];
+        String test = s.split("\\b\\.")[0];
         if (s.length() == 0 || test.length() == 0) {
             return -1;
         }
