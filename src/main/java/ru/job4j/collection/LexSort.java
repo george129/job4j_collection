@@ -9,11 +9,7 @@ public class LexSort implements Comparator<String> {
         if (s.length() == 0 || test.length() == 0) {
             return -1;
         }
-        try {
-            return Integer.parseInt(test);
-        } catch (NumberFormatException nfe) {
-            return -1;
-        }
+        return Integer.parseInt(test);
     }
 
     @Override
