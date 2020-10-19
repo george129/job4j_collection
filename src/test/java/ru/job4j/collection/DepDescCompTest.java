@@ -24,4 +24,8 @@ public class DepDescCompTest {
         assertTrue(rsl < 0);
     }
 
+    @Test
+    public void sameLengthDifferentFirst() {
+        assertTrue(new DepDescComp().compare("K2/SK2", "K1/SK2") < 0);
+    }
 }
